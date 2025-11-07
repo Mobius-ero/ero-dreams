@@ -4,9 +4,6 @@ body {
     font-family: Verdana, Geneva, Tahoma;
     font-size:  1.25rem;
     line-height: 1.6;
-         @media (width < 720px) {
-       margin-block: center;
-}
 }
 
 .header-bar {
@@ -173,4 +170,5 @@ footer {
     text-align: center;
 
 }
+
 
