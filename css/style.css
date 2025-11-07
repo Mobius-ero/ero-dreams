@@ -1,0 +1,171 @@
+
+body {
+    background-color: #000000;
+    font-family: Verdana, Geneva, Tahoma;
+    font-size:  1.25rem;
+    line-height: 1.6;
+}
+
+.header-bar {
+  background-color: #7000c6; /* Black header */
+  color: #D4AF37;
+  justify-content: center;
+  padding: 35px 40px;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: Verdana, Geneva, Tahoma;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+main {
+    text-align: start;
+    padding-top: 40px;
+    
+}
+
+h1 {
+    color: #7000c6;
+    font-size: 3.5rem;
+    text-align: center;
+    
+    @media (width < 720px) {
+        font-size: 2.5rem;
+    }
+}
+
+
+h2 {
+    color: #D4AF37;  
+}
+
+p {
+    color: white;
+    text-align: justify;
+}
+.accent {
+    color: red;
+}
+
+#first-para {
+    color: green;
+    font-size: 1.5rem;
+
+}
+a {
+    color: #D4AF37;
+}
+
+a:hover,
+a:focus-visible  {
+    color: #7000c6;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+      
+    @media (width < 720px) {
+        margin: 0 auto;
+    }
+    margin-top: 40px;
+    width: 350px;
+    height: 490px;
+}
+
+ul {
+    list-style: circle;
+    color: white;
+}
+
+section {
+    margin-block: 75px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+
+.primary-navigation ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.primary-navigation a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+    color: blue;
+}
+
+.wrapper {
+    max-inline-size: 1000px;
+    margin-inline: auto;
+}
+
+.two-column-layout {
+    display: grid;
+    gap: 5px; 
+    margin-block-end: 30px;
+
+    @media (width > 720px) {
+    
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.purple-bg {
+    border: 1px #D4AF37 solid; 
+    background-color: #7000c6;
+    color: #D4AF37;
+    text-align: center;
+    padding: 10px;
+    font-family:'Segoe UI';
+    
+}
+
+.purple-bg strong {
+    color: #47e00f;
+}
+
+.witch {
+    color: #8800c7;
+
+}
+
+.red-bg {
+    color: #D4AF37;
+}
+
+.photo-text {
+    color: #ffffff;
+    background-image: url("../images/lisaMinci.png");
+    padding: 20px;
+    text-align: center;
+    border: 5px #310054 solid; 
+    background-position: center;
+    background-size: cover;  
+}
+
+footer {
+    text-align: center;
+}
