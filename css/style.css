@@ -119,6 +119,12 @@ header img {
 .wrapper {
     max-inline-size: 1000px;
     margin-inline: auto;
+    
+    @media (width > 720px) {
+    
+        max-inline-size: 1000px;
+        margin-inline: auto;
+    }
 }
 
 .two-column-layout {
@@ -170,6 +176,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
