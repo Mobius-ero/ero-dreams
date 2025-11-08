@@ -152,11 +152,9 @@ header img {
 
 
 .purple-bg {
-    background-color: black;
     color: #D4AF37;
     text-align: center;
     padding: 10px;
-    width: 100%;
     font-family:'Segoe UI';
     
 }
@@ -188,6 +186,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
