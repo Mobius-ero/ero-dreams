@@ -4,17 +4,22 @@ body {
     font-family: Verdana, Geneva, Tahoma;
     font-size:  1.25rem;
     line-height: 1.6;
+    margin: 0; /* remove default browser spacing */
 }
 
 .header-bar {
-  background-color: black; /* Black header */
+  background-color: black;
   color: #D4AF37;
+  display: flex;
   justify-content: center;
   padding: 10px 5px;
-  top: 0;
   width: 100%;
+  position: relative; /* or fixed if you want it to stay visible while scrolling */
+  top: 0;
   z-index: 1000;
+  margin-top: 0; /* ensures it touches the top */
 }
+
 
 .logo {
   font-family: Verdana, Geneva, Tahoma;
@@ -35,6 +40,7 @@ h1 {
     
     @media (width < 720px) {
         font-size: 1.5rem;
+          text-align: center;
     }
 }
 
@@ -170,6 +176,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
