@@ -7,10 +7,10 @@ body {
 }
 
 .header-bar {
-  background-color: #7000c6; /* Black header */
+  background-color: black; /* Black header */
   color: #D4AF37;
   justify-content: center;
-  padding: 35px 40px;
+  padding: 10px 5px;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -29,7 +29,7 @@ main {
 }
 
 h1 {
-    color: #7000c6;
+    color: black;
     font-size: 3.5rem;
     text-align: center;
     
@@ -62,7 +62,7 @@ a {
 
 a:hover,
 a:focus-visible  {
-    color: #7000c6;
+    color: #00e000;
 }
 
 img {
@@ -135,7 +135,7 @@ header img {
 
 .purple-bg {
     border: 1px #D4AF37 solid; 
-    background-color: #7000c6;
+    background-color: black;
     color: #D4AF37;
     text-align: center;
     padding: 10px;
@@ -170,6 +170,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
