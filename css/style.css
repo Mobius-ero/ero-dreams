@@ -119,11 +119,13 @@ header img {
 .wrapper {
     max-inline-size: 1000px;
     margin-inline: auto;
+    padding-inline: 1rem;
+    width: 100%;
+}
     
-    @media (width > 720px) {
-    
-        max-inline-size: 1000px;
-        margin-inline: auto;
+@media (min-width: 768px) {
+        .wrapper {
+           padding-inline: 2rem;
     }
 }
 
@@ -176,6 +178,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
