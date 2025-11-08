@@ -27,6 +27,18 @@ body {
   font-size: 2rem;
 }
 
+.ad-wrapper {
+  width: 100%;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.ad-wrapper ins {
+  max-width: 100%;
+}
+
+
 main {
     text-align: start;
     padding-top: 40px;
@@ -175,6 +187,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
