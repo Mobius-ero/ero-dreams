@@ -118,8 +118,6 @@ ul {
     color: black;
     
      @media (width < 720px) {
-      
-        text-align: center;
        padding-inline: 20px;
     }
 }
@@ -210,6 +208,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
