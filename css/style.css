@@ -9,6 +9,7 @@ body {
     @media (width < 720px) {
        margin-block: 0 auto;
        font-size: 1rem;
+       padding-inline: 20px;
     }
 }
 
@@ -195,6 +196,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
