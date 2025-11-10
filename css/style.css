@@ -58,7 +58,11 @@ h1 {
 
 
 h2 {
-    color: #D4AF37;  
+    color: #D4AF37; 
+
+      @media (width < 720px) {
+        text-align: center;
+    }
 }
 
 p {
@@ -186,6 +190,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
