@@ -9,7 +9,6 @@ body {
     @media (width < 720px) {
        margin-block: 0 auto;
        font-size: 1rem;
-       padding-inline: 20px;
     }
 }
 
@@ -58,7 +57,9 @@ h1 {
     
     @media (width < 720px) {
         font-size: 1.5rem;
-          text-align: center;
+        text-align: center;
+        padding-inline: 20px;
+      
     }
 }
 
@@ -68,12 +69,19 @@ h2 {
 
       @media (width < 720px) {
         text-align: center;
+       padding-inline: 20px;      
     }
+    
 }
 
 p {
     color: black;
     text-align: justify;
+
+     @media (width < 720px) {
+       padding-inline: 20px;
+      
+    }
 }
 .accent {
     color: red;
@@ -108,6 +116,12 @@ img {
 ul {
     list-style: circle;
     color: black;
+    
+     @media (width < 720px) {
+      
+        text-align: center;
+       padding-inline: 20px;
+    }
 }
 
 section {
@@ -196,6 +210,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
