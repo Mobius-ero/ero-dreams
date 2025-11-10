@@ -94,7 +94,7 @@ img {
     @media (width < 720px) {
         margin: 0 auto;
     }
-    margin-top: 40px;
+    margin-top: 15px;
     width: 350px;
     height: 490px;
 }
@@ -190,6 +190,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
