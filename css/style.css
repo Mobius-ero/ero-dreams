@@ -5,6 +5,11 @@ body {
     font-size:  1.25rem;
     line-height: 1.6;
     margin: 0; /* remove default browser spacing */
+     
+    @media (width < 720px) {
+       margin-block: 0 auto;
+       font-size: 1rem;
+    }
 }
 
 .header-bar {
@@ -190,6 +195,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
