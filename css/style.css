@@ -58,7 +58,7 @@ h1 {
     @media (width < 720px) {
         font-size: 1.5rem;
         text-align: center;
-        padding-inline: 20px;
+        padding-inline: 15px;
       
     }
 }
@@ -69,7 +69,7 @@ h2 {
 
       @media (width < 720px) {
         text-align: center;
-       padding-inline: 20px;      
+       padding-inline: 15px;      
     }
     
 }
@@ -79,7 +79,7 @@ p {
     text-align: justify;
 
      @media (width < 720px) {
-       padding-inline: 20px;
+       padding-inline: 15px;
       
     }
 }
@@ -208,6 +208,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
