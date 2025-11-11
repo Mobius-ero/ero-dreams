@@ -110,13 +110,13 @@ a:focus-visible  {
 img {
     display: block;
     max-inline-size: 100%;
-      
+    margin-top: 35px;
+    width: 350px;
+    height: 460px;
+    
     @media (width < 720px) {
         margin: 0 auto;
     }
-    margin-top: 15px;
-    width: 350px;
-    height: 460px;
 }
 
 ul {
@@ -214,6 +214,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
