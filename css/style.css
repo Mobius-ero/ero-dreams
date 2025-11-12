@@ -60,6 +60,7 @@ h1 {
     color: black;
     font-size: 2rem;
     text-align: start;
+    padding-inline: 15px;
     
     @media (width < 720px) {
         font-size: 1.5rem;
@@ -71,7 +72,8 @@ h1 {
 
 
 h2 {
-    color: #D4AF37; 
+    color: #D4AF37;
+    padding-inline: 15px;
 
       @media (width < 720px) {
         text-align: center;
@@ -83,6 +85,7 @@ h2 {
 p {
     color: black;
     text-align: justify;
+    padding-inline: 15px;
 
      @media (width < 720px) {
        padding-inline: 15px;
@@ -110,8 +113,9 @@ a:focus-visible  {
 img {
     display: block;
     max-inline-size: 100%;
+    padding-inline: 20px;
     margin-top: 35px;
-    width: 350px;
+    width: 380px;
     height: 460px;
     
     @media (width < 720px) {
@@ -122,6 +126,7 @@ img {
 ul {
     list-style: circle;
     color: black;
+    padding-inline: 35px;
     
      @media (width < 720px) {
        padding-inline: 30px;
@@ -165,6 +170,7 @@ header img {
 .wrapper {
     max-inline-size: 1000px;
     margin-inline: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .two-column-layout {
@@ -215,6 +221,7 @@ footer {
     text-align: center;
 
 }
+
 
 
 
