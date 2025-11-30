@@ -236,9 +236,12 @@ body.light-mode .review-text-content {
 
 h3 {
     padding-inline: 15px;
+    font-size: 1rem;
+}
 }
 
 p {
+    font-size: .9rem;
     margin-block: 5px;
     line-height: 20px;
     padding-inline: 15px;
@@ -353,3 +356,4 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
