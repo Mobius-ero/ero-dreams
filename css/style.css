@@ -432,11 +432,11 @@ nav svg {
         top: 0%;
         right: -100%;
         z-index: 10;
-        width: 300px;
+        width: 280px;
 
         background-color: #121212;
         box-shadow: -5px 0 5px #00000040;
-        transition: .55s ease-out;
+        transition: .3s ease-out;
     }
     nav a {
         box-sizing: border-box;
@@ -695,3 +695,4 @@ footer {
 
 
 }
+
