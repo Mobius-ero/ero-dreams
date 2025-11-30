@@ -235,11 +235,18 @@ body.light-mode .review-text-content {
     text-align: center;
     margin-top: 50px;
     margin-bottom: 30px;
+ padding-inline: 15px;
+   @media(width < 720px){
+         padding-inline: 15px;
+    }
 }
 
 h3 {
     padding-inline: 15px;
     font-size: 1rem;
+   @media(width < 720px){
+         padding-inline: 15px;
+    }
 }
 }
 
@@ -248,6 +255,9 @@ p {
     margin-block: 5px;
     line-height: 20px;
     padding-inline: 15px;
+   @media(width < 720px){
+         padding-inline: 15px;
+    }
 
 }
 
@@ -359,6 +369,7 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
 
 
 
