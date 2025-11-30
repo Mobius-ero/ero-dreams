@@ -105,7 +105,7 @@ nav .about-link {
 }
 nav svg {
     fill: #F0F0F0;
-    margin-top: 5px;
+    margin-top: 7px;
 }
 #sidebar-active {
     display: none;
@@ -358,5 +358,6 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
 
 
