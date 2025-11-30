@@ -1,0 +1,696 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+:root {
+    /* Example colors, use your actual values */
+    --text-color: #FFFFFF;
+    --background-color: #1A1A1A;
+    --accent-color: #00CED1; /* Cyan/Aqua color for stars/links */
+    --border-color: #333333;
+    --card-bg-color: #242424; /* Slightly lighter card background */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1A1A1A;
+    font-family: Poppins, sans-serif;
+    color: #F0F0F0;
+    font-size:  1rem;
+    line-height: 1.6;
+    margin: 0; /* remove default browser spacing */
+    overflow-x: hidden;
+
+     @media (width < 600px) {
+
+       margin-block: 0 auto;
+       font-size: 1rem;
+      
+    }
+    
+}
+
+.header-bar {
+  background-color: #121212;
+  color: #F0F0F0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: sticky;   /* fixed so we can control visibility */
+  top: 0;
+  z-index: 1000;
+  margin-top: 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid var(--border-color);
+  transition: transform 0.3s ease; /* smooth hide/show */
+}
+
+.header-bar.hide {
+  transform: translateY(-100%); /* slide header up */
+}
+
+main.wrapper {
+  padding-top: 60px; /* equal to header height */
+}
+
+
+
+.logo {
+  font-weight: bold;
+  font-size: 2em;
+  color: #F0F0F0;
+  align-items: center;
+  margin-top: 4px;
+  letter-spacing: 1px;
+  padding-inline: 10px;
+  margin-inline: 10px;
+  
+  @media (width < 720px) {
+        font-size: 1.75em;
+        text-align: center;
+        padding: 0;
+        margin-top: 7px;
+}
+}
+/* Styling for the new logo link */
+.logo-link {
+    text-decoration: none; /* Remove any default underline */
+    color: inherit; /* Ensure the link inherits the color of the logo text */
+    /* Ensure the link doesn't break your layout */
+    display: block; 
+}
+
+
+
+.right-header-controls {
+    display:flex;
+    
+}
+
+.accent-text {
+    color: #00CED1; /* Vibrant Cyan/Teal */
+}
+
+main {
+    text-align: start;
+    padding-top: 40px;
+    
+}
+.introduction {
+            margin: 40px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color); /* Subtle divider */
+        }
+
+h1 {
+   
+    font-size: 1.75rem;
+    text-align: center;
+    padding-inline: 15px;
+   
+       
+    @media (max-width: 720px) {
+        font-size: 1.2rem;
+        text-align: center;
+      
+    }
+    
+}
+
+.subtle-separator {
+    /* Remove the browser default style */
+    border: none;
+
+    /* Set it to a very faint gray */
+    border-top: 1px solid #333333; 
+
+    /* Add space above and below */
+    margin: 10px auto; 
+
+    /* Optional: Make it slightly shorter than full width */
+    width: 80%; 
+}
+
+#.box {
+    border-bottom: 1px solid gray;
+}
+
+
+
+h2 {
+
+    padding-inline: 15px;
+    margin-bottom: 5px;
+
+    @media (width < 600px) {
+      
+        text-align: center;
+      
+    }
+        
+      
+}
+.review-title-trigger {
+
+    /* Critical: Set position relative so the tooltip can be positioned absolutely inside */
+    position: relative; 
+    /* Indicates the element is interactive */
+    cursor: default; 
+}
+
+/* --- 2. Styling the Hidden Tooltip --- */
+.score-breakdown-tooltip {
+    /* Positioning the Pop-up */
+    position: absolute;
+    top: 60px; 
+    
+    /* Adjust horizontal position: starts from the left edge of the H2 */
+    left: 0; 
+    
+    /* REMOVE all transform properties if you use this simple position */
+    transform: none; 
+
+    /* Visual Styling */
+    background-color: #00CED1; /* Cyan accent background */
+    color: #1A1A1A; /* Dark text for high contrast */
+    padding: 5px 2px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    white-space: nowrap; /* Keep the text on one line */
+    z-index: 10; 
+    
+    /* Hiding the element by default */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(10px); /* Small offset for smooth entry */
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+/* --- 3. The Activation on Hover --- */
+.review-title-trigger:hover .score-breakdown-tooltip {
+    /* Make it visible and bring it into position */
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(20px); /* Final position */
+
+    @media (width < 600px) {
+        display: none;
+    }
+}
+
+
+
+/* -------------------- */
+/* --- RATING SYSTEM ---*/
+/* -------------------- */
+.review-rating {
+    /* Set the container font size (make the stars large!) */
+    font-size: 1.5em; 
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block; /* Ensures it takes up its own line */
+}
+
+/* Style for the stars that are "filled" */
+.filled-stars {
+    color: #00CED1; /* Vibrant Cyan/Teal Accent Color */
+    /* Add a small space between stars */
+    letter-spacing: 2px;
+    padding-left: 17px;
+}
+
+/* Style for the stars that are "empty" (just for contrast) */
+.empty-stars {
+    color: #444444; /* A dark gray to make them visible but subtle */
+    letter-spacing: 2px;
+}
+
+/* --- OPTIONAL: Styling for the half-star --- */
+.half-star {
+    /* Use a linear gradient to blend the accent and empty color */
+    background: linear-gradient(to right, #00CED1 50%, #444444 50%);
+    /* Clip the text to the background gradient */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+
+@media (width < 600px) {
+    /* ... other mobile styles for .two-column-layout, img, h2 ... */
+
+    .review-rating {
+        /* This is the key: it centers all inline content (the stars) inside the div */
+        text-align: center; 
+        
+        /* You should also remove any unnecessary left padding if you added it for desktop */
+        padding-left: 0;
+    }
+}
+
+
+p {
+   
+    text-align: justify;
+    padding-inline: 15px;
+    margin-block: 15px;
+
+    @media (max-width: 600px) {
+      
+        padding-inline: 15px;
+        
+      
+    }
+
+}
+
+ul {
+    padding-inline: 30px;
+}
+
+.accent {
+    color: red;
+}
+
+#first-para {
+    color: green;
+    font-size: 1.5rem;
+
+}
+a {
+    color: #00CED1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover,
+a:focus-visible  {
+    color: #d20a49;
+    transition: background-color 0.2s
+}
+
+.img-container {
+    flex: 0 0 40%; /* Image takes 40% of space on desktop */
+    max-width: 100%;
+    overflow: hidden;
+    border-radius: 12px; /* Rounded corners on the container */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow on image container */
+    transition: all 0.3s ease;
+   
+    @media (width < 600px) {
+        margin: 0 auto;     
+}   
+}
+
+ .two-column-layout:hover .img-container {
+    transform: scale(1.01); /* Very slight zoom on image on card hover */
+}
+
+
+.img-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px; /* Rounded corners on the image */
+    transition: transform 0.3s ease;
+}
+
+/* --- 1. General Badge Style --- */
+.status-badge {
+    /* Basic look */
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px; /* Rounded corners */
+    font-size: 0.9em;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 5px;
+    
+    /* Ensure text color is dark for high contrast on the badge */
+    color: #1A1A1A; 
+}
+
+/* --- 2. Color Coding --- */
+
+/* For Finished Status (Green/Success Color) */
+.status-finished {
+    background-color: #28a745; /* A standard, professional green */
+    color: #F0F0F0;
+}
+
+/* For Ongoing Status (Attention/Vibrant Color) */
+.status-ongoing {
+    background-color: #FF0040; /* A vibrant Red/Pink for attention */
+    color: #F0F0F0; /* Light text for better visibility on dark red */
+    animation: pulse 1.5s infinite; /* Apply the pulse animation */
+}
+
+/* --- 3. The Subtle Pulse Animation (for Ongoing) --- */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 64, 0.4); /* Start with no glow */
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(255, 0, 64, 0); /* Expand glow outward */
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 0, 64, 0); /* Reset */
+    }
+}
+
+section {
+    margin-block: 40px;
+    
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+nav {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+nav a {
+    height: 100%;
+    padding: 0 20px;
+    display: flex;
+    font-size: 1em;
+    align-items: center;
+    text-decoration: none;
+    color: #f0f0f0;
+}
+nav a:hover {
+   
+    color: #00CED1;
+}
+nav .about-link {
+    margin-right: auto;
+}
+nav svg {
+    fill: #F0F0F0;
+    
+}
+.menu {
+    fill: #F0F0F0;
+    margin-top: 8px;  
+}
+ 
+
+
+#sidebar-active {
+    display: none;
+}
+.open-sidebar-button, .close-sidebar-button{
+    display: none;
+}
+
+@media(width < 600px) {
+    .links-container {
+        flex-direction: column;
+        align-items: flex-start;
+
+        position: fixed;
+        top: 0%;
+        right: -100%;
+        z-index: 10;
+        width: 300px;
+
+        background-color: #121212;
+        box-shadow: -5px 0 5px #00000040;
+        transition: .55s ease-out;
+    }
+    nav a {
+        box-sizing: border-box;
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    .open-sidebar-button, .close-sidebar-button {
+        padding: 20px;
+        display: block;
+    }
+    #sidebar-active:checked ~ .links-container {
+        right: 0;
+    
+    }
+#sidebar-active:checked ~ #overlay {
+    background-color: #00000040;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    transition: background-color .3s;
+}
+
+}
+
+   
+ /* Default State (Dark Mode) */
+        #sun-icon  { display: inline-block; }
+        #moon-icon { display: none; }
+        
+        body.light-mode #sun-icon  { display: none; }
+        body.light-mode #moon-icon { display: inline-block; }
+
+        #mode-toggle {
+            /* Reset Button Styles */
+            background: none;
+            border: none;
+            cursor: pointer;
+            
+            /* Font and Color */
+            font-size: 1.5rem; 
+            padding: 0 10px;
+            margin-left: 10px;
+            
+            /* Ensure the color matches the text color by default */
+            color: inherit; 
+            transition: color 0.2s ease;
+        }
+
+        #mode-toggle:hover {
+            color: #00CED1; /* Use your accent color on hover */
+        }
+
+        /* Ensure the SVG's fill color is controlled by the parent button's 'color' property */
+        #mode-toggle svg {
+            fill: currentColor; /* Inherits the 'color' from the button */
+            height: 1.5rem;
+            width: 1.5rem;
+            margin-bottom: 2.5px;
+            vertical-align: middle; /* Fixes misalignment */
+        }
+
+/* --- 2. Light Mode Palettes (Inversion) --- */
+
+body.light-mode {
+    background-color: #FFFFFF; /* Light background */
+    color: #1A1A1A;             /* Dark text */
+
+    .subtle-separator {
+    /* Remove the browser default style */
+    border: none;
+
+    /* Set it to a very faint gray */
+    border-top: 1px solid #E0E0E0; 
+    }
+
+    .introduction {
+    border-bottom-color: #E0E0E0;
+    }
+    .header-bar {
+        border-bottom: 1px solid #cccccc;
+    }
+    .purple-bg {
+        border-top: 1px solid #f0f0f0;
+    }
+
+    img {
+             box-shadow: 0 4px 15px rgba(144, 144, 144, 0.4); /* Shadow on image container */
+
+    }
+
+    .two-column-layout{
+          background-color: #f8f8f8;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+          border: 1px solid  #DDDDDD;
+    }
+    .two-column-layout:hover {
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+    }
+    .metadata-group{
+     background-color: #E8E8E8;
+}
+
+    .empty-stars {
+    color: #cccccc; /* A dark gray to make them visible but subtle */
+    letter-spacing: 2px;
+}
+
+    .half-star {
+    /* Use a linear gradient to blend the accent and empty color */
+    background: linear-gradient(to right, #00CED1 50%, #cccccc 50%);
+    /* Clip the text to the background gradient */
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 2px;
+}
+}
+ 
+.external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 1px; /* spacing between text and icon */
+  color: #00CED1;
+  text-decoration: none;
+}
+
+.external-link .ext-icon {
+  width: 18px;
+  height: 18px;
+  fill: currentColor; /* icon matches text color */
+}
+.ext-icon path {
+  stroke: currentColor;
+  stroke-width: 30; /* increase to make it thicker */
+}
+
+
+/* Example: Inverting the review text content container background */
+/* You will need to add more inversions for any elements that have hardcoded dark colors */
+body.light-mode .review-text-content {
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.primary-navigation ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-top: 10px;
+    margin-inline: 15px;
+    
+    @media (width < 720px) {
+        padding: 0;
+        padding-top: 0px;
+   
+    }
+}
+
+.primary-navigation a {
+    color:#F0F0F0;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.primary-navigation a:hover,
+.primary-navigation a:focus-visible {
+    color: #F0F0F0;
+    background-color:#00CED1;
+    padding: 15px;
+}
+
+.wrapper { 
+    max-inline-size: 1000px;
+    margin-inline: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+.two-column-layout {
+    display: grid;
+    gap: 5px;
+    padding: 30px 15px;
+    margin-block-end: 30px;
+    border: 1px solid var(--border-color);
+    background-color: var(--card-bg-color);
+    border-radius: 12px;
+    margin-bottom: 5px; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Outward shadow for lift */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    @media (width > 600px) {
+        grid-template-columns: 1fr 1fr;
+        padding: 30px;
+    }
+}
+
+.two-column-layout:hover {
+            transform: translateY(-5px); /* Lift effect */
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6); /* Deeper shadow on hover */
+        }
+
+.metadata-group{
+    font-weight:600;
+    background-color: var(--border-color);
+    padding: 1px;
+    border-radius: 12px;
+    margin: 0px 15px;
+}
+
+.purple-bg {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    font-size: .9rem;
+    border-top: 1px solid #222;
+    
+}
+
+.purple-bg strong {
+    color: #47e00f;
+}
+
+
+.red-bg {
+    background-color: #B22222;
+    color: #F0F0F0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em; 
+}
+
+.photo-text {
+    color: #F0F0F0;
+    background-image: url("https://i.redd.it/hyeonjung-residence-most-fuckable-mother-and-daughter-pair-v0-57uxip7b7yzb1.jpg?width=1418&format=pjpg&auto=webp&s=1ffbb0bab2d3eea2c1a163f4006671cebb1368eb");
+    background-repeat: no-repeat;
+    padding:  200px;
+    text-align: center;
+    font-size: 2rem;
+    border: 2px  #121212 solid; 
+    background-position: center;
+    background-size: cover;  
+}
+
+footer {
+    text-align: center;
+
+}
