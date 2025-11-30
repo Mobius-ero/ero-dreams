@@ -22,11 +22,13 @@ body {
     line-height: 1.6;
     margin: 0; /* remove default browser spacing */
     overflow-x: hidden;
+    scroll-behavior: smooth;
 
      @media (width < 600px) {
 
        margin-block: 0 auto;
        font-size: 1rem;
+         scroll-behavior: smooth;
       
     }
     
@@ -695,4 +697,5 @@ footer {
 
 
 }
+
 
