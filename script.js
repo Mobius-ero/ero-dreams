@@ -1,38 +1,57 @@
-// Wait for the entire document to be loaded before running the script
-document.addEventListener('DOMContentLoaded', () => {
-    // Get the toggle button element using its ID
-    const toggleButton = document.getElementById('mode-toggle');
+// script.js - replace your current file with this
+
+(function () {
+  // Helper to apply/remove the theme class on both html and body
+  function applyThemeClass(isLight) {
+    const html = document.documentElement;
     const body = document.body;
-
-    // --- A. Check Saved Preference on Load ---
-    const savedMode = localStorage.getItem('theme');
-    
-    // Set the initial theme based on the saved preference
-    if (savedMode === 'light') {
-        body.classList.add('light-mode');
-        // Update the SVG icon to reflect the dark background (moon) if needed
-        // (Since your SVG is a sun/light icon, we can swap it in the HTML later if you want a moon icon)
-        
+    if (isLight) {
+      html.classList.add('light-mode');
+      if (body) body.classList.add('light-mode');
     } else {
-        // If no preference or preference is 'dark', ensure base dark mode is active
-        body.classList.remove('light-mode');
+      html.classList.remove('light-mode');
+      if (body) body.classList.remove('light-mode');
+    }
+  }
+
+  // Read saved preference synchronously (useful when called before DOMContentLoaded)
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    // apply immediately to html (if body not present yet, we'll also apply on DOMContentLoaded)
+    document.documentElement.classList.add('light-mode');
+  } else if (saved === 'dark') {
+    document.documentElement.classList.remove('light-mode');
+  }
+
+  // Re-apply when the page is restored from back/forward cache
+  window.addEventListener('pageshow', () => {
+    const s = localStorage.getItem('theme');
+    applyThemeClass(s === 'light');
+  });
+
+  // Once DOM is ready, ensure body also has the class and wire up the button
+  document.addEventListener('DOMContentLoaded', () => {
+    // Make sure body matches html (in case head-only script set html earlier)
+    const htmlIsLight = document.documentElement.classList.contains('light-mode');
+    applyThemeClass(htmlIsLight);
+
+    // Wire up toggle button
+    const toggleButton = document.getElementById('mode-toggle');
+    if (!toggleButton) {
+      // no button found — nothing to do
+      return;
     }
 
-    // --- B. Handle the Button Click ---
-    if (toggleButton) {
-        toggleButton.addEventListener('click', () => {
-            // Toggle the 'light-mode' class on the body
-            body.classList.toggle('light-mode');
+    toggleButton.addEventListener('click', () => {
+      const nowLight = !document.documentElement.classList.contains('light-mode');
+      applyThemeClass(nowLight);
 
-            // Save the new preference to browser storage
-            if (body.classList.contains('light-mode')) {
-                localStorage.setItem('theme', 'light');
-            } else {
-                localStorage.setItem('theme', 'dark');
-            }
-        });
-    }
-});
+      // Persist
+      localStorage.setItem('theme', nowLight ? 'light' : 'dark');
+    });
+  });
+})();
+
 
 let lastScrollTop = 0;
 const header = document.querySelector(".header-bar");
@@ -50,5 +69,6 @@ window.addEventListener("scroll", function () {
 
   lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // prevent negative values
 });
+
 
 
