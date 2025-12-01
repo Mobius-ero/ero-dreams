@@ -50,7 +50,7 @@ main.wrapper {
   font-size: 2em;
   color: #F0F0F0;
   align-items: center;
-  margin-top: 5px;
+  margin-top: 6px;
   letter-spacing: 1px;
   margin-inline: 10px;
   padding-inline: 10px;
@@ -59,7 +59,7 @@ main.wrapper {
         font-size: 1.75em;
         text-align: center;
         padding: 0;
-        margin-top: 7px;
+        margin-top: 8px;
 }
 }
 /* Styling for the new logo link */
@@ -369,6 +369,7 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
 
 
 
