@@ -1,8 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mobius-ero.github.io/ero-dreams/</loc>
-    <lastmod>2025-11-11</lastmod>
-    <priority>1.0</priority>
-  </url>
+    <!-- 1. The main domain/homepage (usually maps to index.html) -->
+    <url>
+        <loc>https://erodreams.online/</loc>
+    </url>
+    
+    <!-- 2. The explicit homepage file -->
+    <url>
+        <loc>https://erodreams.online/home.html</loc>
+    </url>
+
+    <!-- 3. The About page -->
+    <url>
+        <loc>https://erodreams.online/about.html</loc>
+    </url>
+
+    <!-- 4. The Disclaimer page -->
+    <url>
+        <loc>https://erodreams.online/Disclaimer.html</loc>
+    </url>
+    
+    <!-- If you have other .html files, list them here too! -->
+
 </urlset>
