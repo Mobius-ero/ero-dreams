@@ -241,6 +241,47 @@ body.light-mode .review-text-content {
     }
 }
 
+.responsive-ad-container {
+    /* Ensures the container fills 100% of the space available */
+    width: 100%;
+    
+    /* Sets the maximum size for large screens (e.g., desktop) */
+    max-width: 900px;
+    
+    /* Centers the ad container on the page */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* Adds a little vertical spacing */
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.responsive-ad-container iframe {
+    /* Forces the iframe to ignore its fixed HTML attributes (width="900") */
+    width: 100% !important;
+    
+    /* Ensures the iframe height adjusts to the content, or you can set a responsive height: */
+    height: 250px !important; 
+    
+    /* If you want the height to shrink on mobile too, use this media query: */
+}
+
+/* ---------------------------------------------------------------------- */
+/* MEDIA QUERY FOR MOBILE DEVICES (Screens under 600px wide) */
+/* This specifically shrinks the height on phones */
+/* ---------------------------------------------------------------------- */
+@media (max-width: 600px) {
+    .responsive-ad-container {
+        /* On mobile, use padding to give some visual space */
+        padding: 0 5px; 
+    }
+    .responsive-ad-container iframe {
+        /* Shrink the height on very small screens to save vertical space */
+        height: 120px !important; 
+    }
+}
+
 h3 {
     padding-inline: 15px;
     font-size: 1rem;
@@ -369,6 +410,7 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
 
 
 
