@@ -446,7 +446,7 @@ section {
     }
     .responsive-ad iframe {
         /* Shrink the height on very small screens to save vertical space */
-        height: auto !important; 
+        height: 120px !important; 
     }
 }
 
@@ -779,6 +779,7 @@ footer {
 
 
 }
+
 
 
 
