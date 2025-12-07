@@ -439,7 +439,7 @@ p {
     }
     .responsive-ad iframe {
         /* Shrink the height on very small screens to save vertical space */
-        height: 120px !important; 
+        height: auto !important; 
     }
 }
 
@@ -451,6 +451,7 @@ footer {
     border-top: 1px solid #222;
     margin-top: 20px;  
 }
+
 
 
 
